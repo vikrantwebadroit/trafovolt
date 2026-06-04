@@ -16,7 +16,7 @@ export default function Services() {
       icon: <Beaker size={32} />,
       desc: 'Comprehensive chemical and physical analysis of dielectric fluids for insulation health.',
       link: '/services/oil-testing',
-      image: 'https://images.unsplash.com/photo-1579154235602-3c2c2abb5b4a?auto=format&fit=crop&q=80&w=1000'
+      image: 'https://nggpowertech.com/trafovolt/22.jpeg?auto=format&fit=crop&q=80&w=1000'
     },
     {
       title: 'Research & Development',
