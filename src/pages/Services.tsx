@@ -23,7 +23,7 @@ export default function Services() {
       icon: <Search size={32} />,
       desc: 'Innovative solutions for transformer design, IoT monitoring, and energy efficiency.',
       link: '/services/research-development',
-      image: 'https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&q=80&w=1000'
+      image: 'https://nggpowertech.com/trafovolt/223.jpeg?auto=format&fit=crop&q=80&w=1000'
     },
     {
       title: 'Diagnostic Services',
