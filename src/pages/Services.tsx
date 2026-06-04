@@ -9,21 +9,21 @@ export default function Services() {
       icon: <Zap size={32} />,
       desc: 'Full range of type, routine, and specialized testing following IEC and IS standards.',
       link: '/services/transformer-testing',
-      image: 'https://images.unsplash.com/photo-1544724569-5f546fd6f2b5?auto=format&fit=crop&q=80&w=1000'
+      image: 'https://nggpowertech.com/trafovolt/1.jpeg?auto=format&fit=crop&q=80&w=1000'
     },
     {
       title: 'Oil Testing Laboratory',
       icon: <Beaker size={32} />,
       desc: 'Comprehensive chemical and physical analysis of dielectric fluids for insulation health.',
       link: '/services/oil-testing',
-      image: 'https://images.unsplash.com/photo-1579154235602-3c2c2abb5b4a?auto=format&fit=crop&q=80&w=1000'
+      image: 'https://nggpowertech.com/trafovolt/22.jpeg?auto=format&fit=crop&q=80&w=1000'
     },
     {
       title: 'Research & Development',
       icon: <Search size={32} />,
       desc: 'Innovative solutions for transformer design, IoT monitoring, and energy efficiency.',
       link: '/services/research-development',
-      image: 'https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&q=80&w=1000'
+      image: 'https://nggpowertech.com/trafovolt/223.jpeg?auto=format&fit=crop&q=80&w=1000'
     },
     {
       title: 'Diagnostic Services',
