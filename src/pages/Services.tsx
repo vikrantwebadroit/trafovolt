@@ -9,7 +9,7 @@ export default function Services() {
       icon: <Zap size={32} />,
       desc: 'Full range of type, routine, and specialized testing following IEC and IS standards.',
       link: '/services/transformer-testing',
-      image: 'https://md-ht-4.webhostbox.net:2083/cpsess6075601400/frontend/jupiter/filemanager/showfile.html?file=1.jpeg&fileop=&dir=%2Fhome1%2Fa1751t1z%2Fpublic_html%2Ftravolt&dirop=&charset=&file_charset=&baseurl=&basedir=?auto=format&fit=crop&q=80&w=1000'
+      image: 'https://nggpowertech.com/trafovolt/1.jpeg?auto=format&fit=crop&q=80&w=1000'
     },
     {
       title: 'Oil Testing Laboratory',
