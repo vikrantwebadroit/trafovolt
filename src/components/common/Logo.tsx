@@ -19,7 +19,7 @@ export default function Logo({ theme = 'light', className = '', ...props }: Logo
       {...props}
     >
       <img
-        src="https://nggpowertech.com/trafovolt/trafovoltlogo.jpeg"
+        src="https://nggpowertech.com/trafovolt/trafovoltlogo.png"
         alt="Trafovolt Research and Development Centre"
         className="h-full w-auto object-contain max-h-full rounded-lg"
         referrerPolicy="no-referrer"
@@ -27,7 +27,7 @@ export default function Logo({ theme = 'light', className = '', ...props }: Logo
           // If HTTPS has SSL validation issues on the remote server, gracefully fallback to HTTP.
           const target = e.target as HTMLImageElement;
           if (target.src.startsWith('https://')) {
-            target.src = 'http://nggpowertech.com/trafovolt/trafovoltlogo.jpeg';
+            target.src = 'http://nggpowertech.com/trafovolt/trafovoltlogo.png';
           }
         }}
       />
