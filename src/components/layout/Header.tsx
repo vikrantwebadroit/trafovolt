@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
-import { Menu, X, Zap } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
+import Logo from '../common/Logo';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -31,9 +32,7 @@ export default function Header() {
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
         <NavLink to="/" className="flex items-center gap-3 group">
-          <span className={`text-2xl font-black tracking-tighter uppercase italic transition-colors ${isScrolled ? 'text-slate-900' : 'text-white'}`}>TRAFOVOLT</span>
-          <span className={`h-4 w-[1px] ${isScrolled ? 'bg-slate-900' : 'bg-white'} opacity-30`}></span>
-          <span className={`text-[10px] font-bold uppercase tracking-widest transition-colors ${isScrolled ? 'text-slate-500' : 'text-slate-300'}`}>R&D Centre</span>
+          <Logo theme={isScrolled ? 'light' : 'dark'} className="h-11 md:h-14 w-auto transition-all duration-300" />
         </NavLink>
 
         {/* Desktop Nav */}

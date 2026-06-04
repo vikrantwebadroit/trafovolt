@@ -21,7 +21,7 @@ export default function OilTesting() {
           </header>
 
           <img 
-            src="https://nggpowertech.com/trafovolt/22.jpeg?auto=format&fit=crop&q=80&w=1200" 
+            src="https://images.unsplash.com/photo-1579154235602-3c2c2abb5b4a?auto=format&fit=crop&q=80&w=1200" 
             alt="Oil Laboratory" 
             className="w-full h-[400px] object-cover rounded-3xl mb-16 shadow-2xl"
           />

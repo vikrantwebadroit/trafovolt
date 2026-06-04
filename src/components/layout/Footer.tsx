@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom';
-import { Zap, Mail, Phone, MapPin, Linkedin, Twitter, Facebook } from 'lucide-react';
+import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook } from 'lucide-react';
+import Logo from '../common/Logo';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -11,13 +12,7 @@ export default function Footer() {
           {/* Brand Info */}
           <div className="flex flex-col gap-6">
             <NavLink to="/" className="flex items-center gap-2">
-              <div className="bg-brand-blue p-2 rounded-lg">
-                <Zap className="text-white w-6 h-6" />
-              </div>
-              <div className="flex flex-col">
-                <span className="font-bold leading-none text-xl">TRAFOVOLT</span>
-                <span className="text-[10px] tracking-widest font-medium opacity-70">R&D CENTRE</span>
-              </div>
+              <Logo theme="dark" className="h-16 w-auto" />
             </NavLink>
             <p className="text-gray-400 text-sm leading-relaxed">
               Trafovolt R&D Centre is an innovation-driven company specializing in transformer testing, oil testing, and research solutions based in Una (HP), serving global clients.
