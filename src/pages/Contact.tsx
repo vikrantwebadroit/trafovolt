@@ -12,20 +12,41 @@ export default function Contact() {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [errorText, setErrorText] = useState('');
+  const [fixHint, setFixHint] = useState('');
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setErrorText('');
+    setFixHint('');
     
-    // Simulate API call
-    console.log('Sending message:', formData);
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    
-    // In a real app, you would add to Firestore:
-    // await addDoc(collection(db, 'contact_messages'), { ...formData, createdAt: serverTimestamp() });
-    
-    setIsSubmitting(false);
-    setIsSubmitted(true);
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+      
+      const result = await response.json();
+      
+      if (response.ok && result.success) {
+        setIsSubmitted(true);
+        setFormData({ name: '', email: '', phone: '', message: '' });
+      } else {
+        setErrorText(result.error || 'Failed to send message. Please try again.');
+        if (result.fixHint) {
+          setFixHint(result.fixHint);
+        }
+      }
+    } catch (err: any) {
+      console.error(err);
+      setErrorText('Unable to connect to the server. Please verify your connection status.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -141,6 +162,19 @@ export default function Contact() {
                         className="w-full px-5 py-4 rounded-xl bg-brand-gray border border-transparent focus:border-brand-blue focus:bg-white transition-all outline-none resize-none"
                       ></textarea>
                     </div>
+
+                    {errorText && (
+                      <div className="p-4 bg-red-50 border border-red-200 text-red-600 rounded-xl text-sm space-y-1">
+                        <p className="font-bold">Error Sending Message:</p>
+                        <p>{errorText}</p>
+                        {fixHint && (
+                          <div className="mt-2 text-xs text-red-500 font-medium leading-relaxed bg-white/65 p-3 rounded-lg border border-red-100">
+                            <strong>Note:</strong> {fixHint}
+                          </div>
+                        )}
+                      </div>
+                    )}
+
                     <button
                       type="submit"
                       disabled={isSubmitting}

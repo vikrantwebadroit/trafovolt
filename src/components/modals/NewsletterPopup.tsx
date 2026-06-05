@@ -38,19 +38,27 @@ export default function NewsletterPopup() {
     setError('');
 
     try {
-      // Simulate API call
-      console.log('Subscribing:', { name, email });
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      
-      // In a real app, you would add to Firestore:
-      // await addDoc(collection(db, 'subscribers'), { name, email, createdAt: serverTimestamp() });
-      
-      setIsSubmitted(true);
-      setTimeout(() => {
-        handleClose();
-      }, 3000);
+      const response = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ name, email }),
+      });
+
+      const result = await response.json();
+
+      if (response.ok && result.success) {
+        setIsSubmitted(true);
+        setTimeout(() => {
+          handleClose();
+        }, 4000);
+      } else {
+        setError(result.error || 'Failed to register subscription. Please try again later.');
+      }
     } catch (err) {
-      setError('Something went wrong. Please try again.');
+      console.error(err);
+      setError('Unable to connect to service. Please verify your connection status.');
     } finally {
       setIsSubmitting(false);
     }

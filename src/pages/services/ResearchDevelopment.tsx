@@ -36,7 +36,7 @@ export default function ResearchDevelopment() {
           </header>
 
           <img 
-            src="https://nggpowertech.com/trafovolt/223.jpeg?auto=format&fit=crop&q=80&w=1200" 
+            src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&q=80&w=1200" 
             alt="Research and Development" 
             className="w-full h-[400px] object-cover rounded-3xl mb-16 shadow-2xl"
           />
