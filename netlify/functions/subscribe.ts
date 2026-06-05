@@ -2,8 +2,8 @@ import { Handler } from '@netlify/functions';
 import nodemailer from 'nodemailer';
 
 // Pull credentials (defaulting to the specified credentials)
-const GMAIL_USER = process.env.GMAIL_USER || 'vikrantwebadroit@gmail.com';
-const GMAIL_PASS = process.env.GMAIL_PASS || '366815';
+const GMAIL_USER = process.env.GMAIL_USER || 'mkkumarweb@gmail.com';
+const GMAIL_PASS = process.env.GMAIL_PASS || '7814999701';
 const RECIPIENT_EMAIL = process.env.RECIPIENT_EMAIL || 'vikrantwebadroit@gmail.com';
 
 export const handler: Handler = async (event) => {
