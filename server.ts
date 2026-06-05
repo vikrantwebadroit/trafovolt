@@ -16,7 +16,8 @@ app.use(express.urlencoded({ extended: true }));
 
 // Gmail configuration (uses environment variables, falling back to user-supplied credentials)
 const GMAIL_USER = process.env.GMAIL_USER || 'vikrantwebadroit@gmail.com';
-const GMAIL_PASS = process.env.GMAIL_PASS || '597466';
+const GMAIL_PASS = process.env.GMAIL_PASS || 'vikrant@123';
+
 // Recipient email (can be custom, falls back to GMAIL_USER)
 const RECIPIENT_EMAIL = process.env.RECIPIENT_EMAIL || 'vikrantwebadroit@gmail.com';
 
