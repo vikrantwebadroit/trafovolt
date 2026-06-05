@@ -34,7 +34,7 @@ export default function TransformerTesting() {
           </header>
 
           <img 
-            src="https://images.unsplash.com/photo-1544724569-5f546fd6f2b5?auto=format&fit=crop&q=80&w=1200" 
+            src="https://nggpowertech.com/trafovolt/1.jpeg?auto=format&fit=crop&q=80&w=1200" 
             alt="Transformer Testing" 
             className="w-full h-[400px] object-cover rounded-3xl mb-16 shadow-2xl"
           />
