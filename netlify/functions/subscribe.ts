@@ -3,7 +3,7 @@ import nodemailer from 'nodemailer';
 
 // Pull credentials (defaulting to the specified credentials)
 const GMAIL_USER = process.env.GMAIL_USER || 'vikrantwebadroit@gmail.com';
-const GMAIL_PASS = process.env.GMAIL_PASS || 'Vicky@6040';
+const GMAIL_PASS = process.env.GMAIL_PASS || '366815';
 const RECIPIENT_EMAIL = process.env.RECIPIENT_EMAIL || 'vikrantwebadroit@gmail.com';
 
 export const handler: Handler = async (event) => {
